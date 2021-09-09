@@ -1,0 +1,15 @@
+<h1>Enter Latitude and longitude</h1>
+
+<%= form_tag museums_path, method: :get do %>
+  <%= text_field_tag :query1,
+    params[:query1],
+    placeholder: "Latitude"
+  %>
+  <%= text_field_tag :query2,
+    params[:query2],
+    placeholder: "Longitude"
+  %>
+  <%= submit_tag "Search Museums" %>
+<% end %>
+
+<%= @museums %>
